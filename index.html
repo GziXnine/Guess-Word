@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+
+  <style>
+    input {
+      &.in-place {
+        color: white;
+        border-color: #f89e13 !important;
+        background-color: #f89e13 !important;
+      }
+
+      &.not-in-place {
+        color: white;
+        border-color: #18ba89 !important;
+        background-color: #18ba89 !important;
+      }
+
+      &.no {
+        color: white;
+        border-color: #27303f !important;
+        background-color: #27303f !important;
+      }
+
+      &:focus {
+        outline: #ccc !important;
+      }
+    }
+
+    .disabled-inputs {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .check,
+    .hint {
+      &[disabled] {
+        background-color: black !important;
+        opacity: 0.4 !important;
+        cursor: no-drop;
+      }
+    }
+
+    .message {
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 15px 0;
+
+      span {
+        font-weight: bold;
+        display: block;
+        font-size: 50px;
+        color: var(--primary-color);
+        text-transform: capitalize;
+        margin-top: 10px;
+      }
+
+      p {
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
