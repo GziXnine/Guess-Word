@@ -60,10 +60,7 @@ const keyColor2 = createKeyColor(
   "not-in-place",
   "Letter Is Right But Not In Place"
 );
-const keyColor3 = createKeyColor(
-  "no",
-  "Letter Is Wrong And Not Exists In Word"
-);
+const keyColor3 = createKeyColor("no", "Letter Is Wrong, Not Exists In Word");
 
 keyColorsDiv.appendChild(keyColorsTitle);
 keyColorsDiv.appendChild(keyColor1);
@@ -71,7 +68,11 @@ keyColorsDiv.appendChild(keyColor2);
 keyColorsDiv.appendChild(keyColor3);
 
 container.appendChild(keyColorsDiv);
+// ! Create and append the footer
+const footer = document.createElement("footer");
+footer.innerHTML = `${gameName} Made By <span>Allam</span> 🤍`;
 
+document.body.prepend(footer);
 document.body.prepend(container);
 document.body.prepend(header);
 
@@ -121,13 +122,28 @@ container.style.cssText = `
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 30px;
+  min-height: calc(100vh - 306px);
+`;
+
+footer.style.cssText = `
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+`;
+
+footer.children[0].style.cssText = `
+  color: ${primaryColor};
 `;
 
 controlDiv.style.cssText = `
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  max-width: 500px;
   margin: 30px auto 70px;
   gap: 10px;
 `;
@@ -164,6 +180,13 @@ hintButton.children[0].style.cssText = `
   margin-right: 5px;
 `;
 
+messageDiv.style.cssText = `
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 15px 0;
+`;
+
 const keyTextDivs = document.querySelectorAll(".key-text");
 keyTextDivs.forEach((keyTextDiv) => {
   keyTextDiv.style.cssText = `
@@ -181,7 +204,7 @@ keyColorDivs.forEach((keyColorDiv) => {
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 420px;
+    max-width: 520px;
   `;
 
   // ! Make a Style For The Box Of Color
@@ -212,9 +235,6 @@ let wordToGuessArray = [
   "lemon",
   "mango",
   "olive",
-  "cherry",
-  "banana",
-  "orange",
   "tommy",
   "radar",
   "beach",
@@ -250,7 +270,6 @@ let wordToGuessArray = [
   "whale",
   "shark",
   "piano",
-  "guitar",
   "viola",
   "trump",
   "viola",
@@ -330,7 +349,7 @@ function generatGame() {
 
     span.style.cssText = `
       font-weight: bold;
-      font-size: 30px;
+      font-size: 20px;
       margin-right: 15px;
     `;
 
@@ -344,8 +363,8 @@ function generatGame() {
       input.id = `guess-${i}-letter-${j}`;
       input.maxLength = "1";
       input.style.cssText = `
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         margin: 5px;
         border: none;
         border-bottom: 3px solid #333;
