@@ -6,6 +6,10 @@ Welcome to the **Guess the Word** game! This project, inspired by [Elzero Web Sc
 
 Check out the live version of the game [here](https://gziXnine.github.io/Guess-Word).
 
+## 📸 Preview
+
+![Guess Word Screenshot](https://github.com/GziXnine/Guess_Word/blob/main/banner.png)
+
 ## 🕹️ How to Play
 
 1. **Objective**: Guess the hidden 5-letter word within 5 tries.
