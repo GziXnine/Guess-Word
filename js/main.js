@@ -121,8 +121,8 @@ container.style.cssText = `
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 30px;
-  min-height: calc(100vh - 306px);
+  padding: 10px;
+  min-height: calc(100vh - 266px);
 `;
 
 footer.style.cssText = `
@@ -153,9 +153,9 @@ checkButton.style.cssText = `
   color: white;
   font-weight: bold;
   font-size: 18px;
-  padding: 15px 60px;
+  padding: 15px 40px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   flex: 1;
 `;
@@ -165,7 +165,7 @@ hintButton.style.cssText = `
   font-size: 18px;
   color: white;
   padding: 15px 0;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: bold;
   border: none;
   cursor: pointer;
@@ -274,6 +274,7 @@ let wordToGuessArray = [
   "trump",
   "viola",
   "laser",
+  "allam",
   "robot",
   "climb",
   "dance",
@@ -286,7 +287,6 @@ let wordToGuessArray = [
   "rifle",
   "march",
   "squad",
-  "army",
   "plant",
   "bloom",
   "flora",
@@ -319,13 +319,13 @@ let wordToGuessArray = [
   "ruler",
   "chief",
   "mayor",
+  "ahmed",
 ];
 
 wordToGuess =
   wordToGuessArray[
     Math.floor(Math.random() * wordToGuessArray.length)
   ].toLowerCase();
-console.log(wordToGuess);
 
 let numberOfTries = wordToGuess.length;
 let numberOfLetters = wordToGuess.length;
@@ -348,9 +348,9 @@ function generatGame() {
     `;
 
     span.style.cssText = `
-      font-weight: bold;
-      font-size: 20px;
-      margin-right: 15px;
+      font-weight: bolder;
+      font-size: 18px;
+      margin-right: 8px;
     `;
 
     div.append(span);
